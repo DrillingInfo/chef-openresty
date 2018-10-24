@@ -164,6 +164,9 @@ Generally used attributes. Some have platform specific values. See
   value depend on your usage (cache or not) but must always be
   superior than worker_connections.
 
+* `node['openresty']['worker_shutdown_timeout']` - used to configure the timeout for graceful 
+  worker shutdown. Must be a *time* value.
+
 * `node['openresty']['worker_auto_affinity']` - Automatically computes and creates
   CPU affinity assignments (config value `worker_cpu_affinity`) based on the
   total number of workers and CPU cores. Can show a nice performance boost when
